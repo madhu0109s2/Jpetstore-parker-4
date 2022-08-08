@@ -142,9 +142,9 @@ stage ('wait for deploy') {
 	//sh '/var/jenkins_home/onetest/hcl-onetest-command.sh'
  }	
 stage ('Invoke_Jmeterpipeline') {
-            steps {
-                build job: 'JmeterDemo'
-            }
+            
+                build 'JmeterDemo'
+            
         }
 }
 
