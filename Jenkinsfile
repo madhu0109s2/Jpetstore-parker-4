@@ -146,6 +146,9 @@ stage ('Invoke_Jmeterpipeline') {
                 build 'JmeterDemo'
             
         }
+stage ('Invoke_Appscan') {	
+	build 'RKAppscan'
+}
 }
 
 
