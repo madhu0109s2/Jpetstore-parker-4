@@ -15,7 +15,7 @@ node {
 	  
   }
 	
-  }
+  
                
         	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'Maven3.8.6', type:'maven'
@@ -25,6 +25,7 @@ node {
 			 			
 		     sh	"mvn sonar:sonar -Dsonar.projectKey=JPetStore -Dsonar.host.url=http://13.232.179.123:9000/ -Dsonar.login=3c6c04e63d4e546f28413f3120dc578639526c6c"
 		}
+	 
 	 }
 	 }
 	
