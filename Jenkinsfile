@@ -15,18 +15,8 @@ node {
 	  
   }
 	
- 
-  stage ('Build') {
-      withMaven(jdk: 'java11.0.16', maven: 'Maven3.8.6') {
-      sh 'mvn clean package'
-	      echo "**** ${GIT_COMMIT}"
-	//step($class: 'UploadBuild', tenantId: "5ade13625558f2c6688d15ce", revision: "${GIT_COMMIT}", appName: "JPetStore", requestor: "admin", id: "${newComponentVersionId}" )
-	
-	     
-    }
   }
-  
-                           
+               
         	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'Maven3.8.6', type:'maven'
 		//def path = tool name: 'gradle-4.7', type: 'gradle'
